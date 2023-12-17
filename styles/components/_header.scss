@@ -1,0 +1,109 @@
+header{
+    height: auto;
+    border-bottom: 1px solid #ece;
+    padding: 24px 0 25px;
+}
+header .container{
+    display: flex;
+    align-items: center;
+}
+.navigation-list{
+    display: flex;
+}
+
+.logo{
+    color: #2196F3;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 31px;
+    margin-right: 93px;
+}
+.studio{
+    color: #000;
+}
+.studio2{
+    color: white;
+}
+.navigationa, .navigationlink{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #212121;
+
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color;
+    transition-duration: 250ms;
+}
+.menu-list{
+    display: flex;
+    gap: 51px;
+}
+.contacts-list{
+    display: flex;
+}
+.navigationlink{
+    color: #757575;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.contacts-list{
+    margin-left: auto;
+}
+.navigation-list, .contacts-list{
+    gap: 50px;
+}
+.navigationa:hover, .navigationa:focus, .navigationlink:hover, .navigationlink:focus{
+    color: #2196F3;
+    outline: none;
+    position: relative;
+}
+.navigationa::after{
+    content: '';
+    background-color: #2196F3;
+    height: 4px;
+    display: block;
+    border-radius: 2px;
+    width: calc(100% + 4px);
+    position: absolute;
+    bottom: -33px;
+    left: -2px;
+    opacity: 0;
+    transform: scaleX(0);
+
+    transition: transform, opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navigationa:hover::after, .navigationa:focus::after{
+    opacity: 1;
+    transform: scaleX(1);
+}
+.header-icon{
+    max-width: 16px;
+    height: 12px;
+    fill: #757575;
+
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: fill;
+    transition-duration: 250ms;
+}
+.phone-icon{
+    max-width: 10px;
+    height: 16px;
+}
+.navigationlink:hover .header-icon, .navigationlink:focus .header-icon{
+    fill: #2196F3;
+    outline: none;
+}
+
+.active-page{
+    color: #2196F3;
+    position: relative;
+}
+.active-page::after{
+    opacity: 1;
+    transform: scaleX(1);
+}
