@@ -1,0 +1,82 @@
+/* hero  */
+.hero{
+    background-color: rgba(47, 48, 58, 0.40);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(../../images/hero-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    letter-spacing: 0.06em;
+} 
+.hero .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 200px 252px;
+}
+.hero-title{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 44px;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    animation-name: run-title;
+    animation-duration: 3000ms;
+}
+@keyframes run-title{
+    0%{
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.hero-button{
+    width: 216px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #2196F3;
+    border-style: none;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background;
+    transition-duration: 250ms;
+
+    animation-name: button-animation;
+    animation-iteration-count: infinite;
+    animation-duration: 5000ms;
+    animation-delay: 3000ms;
+} 
+.hero-button:hover, .hero-button:focus{
+    background-color: #188CE8;
+    outline: none;
+}
+
+@keyframes button-animation{
+    0%{
+        transform: scale(1);
+    }
+    18%{
+        transform: scale(1.2);
+    }
+    30%{
+        transform: scale(1);
+    }
+    40%{
+        transform: scale(1.5);
+    }
+    70%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

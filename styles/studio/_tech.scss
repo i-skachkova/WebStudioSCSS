@@ -1,0 +1,41 @@
+/* tech  */
+.tech{
+    padding-top: 94px;
+}
+.tech-list{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.tech-img-container{
+    border-radius: 4px;
+    background: #F5F4FA;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.tech-img{
+    width: 70px;
+    height: 70px;
+}
+.tech-title{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #212121;
+}
+.tech-text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #757575;
+    text-transform: none;
+    width: 270px;
+
+    margin-top: 10px;
+}
