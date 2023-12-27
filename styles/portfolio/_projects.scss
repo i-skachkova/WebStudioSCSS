@@ -46,14 +46,14 @@
     font-size: 18px;
     line-height: 36px;
     letter-spacing: 0.06em;
-    color: #212121;
+    color: $text-color1;
 }
 .project-type{
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: $text-color2;
 
     margin-top: 4px;
 }
@@ -80,7 +80,7 @@
 }
 .card-owerflow-text{
     color: #FFF;
-    font-family: 'Roboto';
+    font-family: $Roboto;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
