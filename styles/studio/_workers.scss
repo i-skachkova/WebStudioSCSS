@@ -22,38 +22,20 @@
     height: 260px;
 }
 .workers-title{
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: $text-color1;
+    @include text-prop ($text-color1, 700, 36px, 42px);
     margin-bottom: 50px;
 }
 .workers-names{
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: $text-color1;
-
+    @include text-prop ($text-color1, 700, 16px, 19px);
     margin-top: 30px;
 }
 .workers-job{
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: $text-color2;
+    @include text-prop ($text-color2, 400, 16px, 19px);
 
     margin-top: 10px;
 }
 .workers-socials{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flex-base;
     gap: 10px;
 
     margin-top: 16px;
@@ -63,30 +45,25 @@
     width: 44px;
     height: 44px;
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transition-property: background-color;
-    transition-duration: 250ms;
 }
 .workers-link{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-base;
     border-radius: 100%;
     width: 44px;
     height: 44px;
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transition-property: color;
-    transition-duration: 250ms;
 }
 .workers-svg{
     width: 20px;
     height: 20px;
     fill: #AFB1B8;
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transition-property: fill;
-    transition-duration: 250ms;
 }
 .workers-social:hover .workers-svg, .workers-link:focus .workers-svg{
     fill: #FFF;

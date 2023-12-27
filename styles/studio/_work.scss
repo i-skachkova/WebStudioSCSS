@@ -11,12 +11,7 @@
     position: relative;
 }
 .work-title{
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: $text-color1;
+    @include text-prop ($text-color1, 700, 36px, 42px);
     margin-bottom: 50px;
 }
 .work-img{
@@ -25,9 +20,7 @@
 }
 .work-card{
     width: 370px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-base;
     background: rgba(47, 48, 58, 0.80);
     padding-top: 27px;
     padding-bottom: 27px;
@@ -39,7 +32,7 @@
     color: #FFF;
     text-align: center;
     font-family: $Roboto;
-    font-size: 14px;
+    @extend %text-size;
     font-weight: 700;
     letter-spacing: 0.42px;
     text-transform: uppercase;

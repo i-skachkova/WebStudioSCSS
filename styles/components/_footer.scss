@@ -17,11 +17,10 @@ footer .logo{
     letter-spacing: 0.03em;
 }
 footer address{
+    @extend %text-size;
     color: #FFF;
-    font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px;
     letter-spacing: 0.42px;
     margin-top: 20px;
 }
@@ -30,24 +29,21 @@ footer address{
 }
 .navigationf a{
     font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
+    @extend %text-size;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-social-networks-title{
     color: #FFF;
-    font-size: 14px;
+    @extend %text-size;
     font-weight: 700;
     letter-spacing: 0.42px;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
 .footer-social-networks-list{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-base;
     gap: 10px;
 }
 .footer-social-networks-item, .footer-social-networks-link:focus{
@@ -56,14 +52,11 @@ footer address{
     height: 44px;
     background: rgba(255, 255, 255, 0.10);
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transition-property: background;
-    transition-duration: 250ms;
 }
 .footer-social-networks-link{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-base;
     border-radius: 100%;
     width: 44px;
     height: 44px;
@@ -80,7 +73,7 @@ footer address{
 .footer-form-title{
     color: #FFF;
     font-family: $Roboto;
-    font-size: 14px;
+    @extend %text-size;
     font-weight: 700;
     letter-spacing: 0.42px;
     text-transform: uppercase;
@@ -105,9 +98,7 @@ footer address{
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     width: 200px;
     height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-base;
     gap: 10px;
     color: #FFF;
     font-family: $Roboto;
@@ -116,9 +107,8 @@ footer address{
     line-height: 1.87; 
     letter-spacing: 0.96px;
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transition-property: background;
-    transition-duration: 250ms;
 }
 .footer-form-button:hover{
     background: $button-color;

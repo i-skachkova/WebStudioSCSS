@@ -11,9 +11,7 @@
     border-radius: 4px;
     background: #F5F4FA;
     height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flex-base;
     margin-bottom: 30px;
 }
 .tech-img{
@@ -21,17 +19,12 @@
     height: 70px;
 }
 .tech-title{
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
+    @include text-prop ($text-color1, 700, 14px, 16px);
     text-transform: uppercase;
-    color: $text-color1;
 }
 .tech-text{
     font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
+    @extend %text-size;
     letter-spacing: 0.03em;
     color: $text-color2;
     text-transform: none;

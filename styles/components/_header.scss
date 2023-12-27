@@ -32,9 +32,8 @@ header .container{
     letter-spacing: 0.02em;
     color: $text-color1;
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transition-property: color;
-    transition-duration: 250ms;
 }
 .menu-list{
     display: flex;
@@ -74,8 +73,7 @@ header .container{
     transform: scaleX(0);
 
     transition: transform, opacity;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
 }
 .navigationa:hover::after, .navigationa:focus::after{
     opacity: 1;
@@ -86,9 +84,8 @@ header .container{
     height: 12px;
     fill: $text-color2;
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transition-property: fill;
-    transition-duration: 250ms;
 }
 .phone-icon{
     max-width: 10px;

@@ -18,9 +18,8 @@
     position: relative;
     overflow: hidden;
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transition-property: box-shadow;
-    transition-duration: 250ms;
 }
 .card-box{
     position: relative;
@@ -33,9 +32,8 @@
     flex-direction: column;
     justify-content: center;
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transition-property: box-shadow;
-    transition-duration: 250ms;
 }
 .projects-item:hover, .project-link:focus .projects-item{
     box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
@@ -49,12 +47,7 @@
     color: $text-color1;
 }
 .project-type{
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 0.03em;
-    color: $text-color2;
-
+    @include text-prop ($text-color2, 400, 16px, 30px);
     margin-top: 4px;
 }
 .card-owerflow{
@@ -70,9 +63,8 @@
 
     transform: translateY(100%);
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transition-property: transform, opacity;
-    transition-duration: 250ms;
 }
 .project-link:hover .card-owerflow, .project-link:focus .card-owerflow{
     opacity: 1;

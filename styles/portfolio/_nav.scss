@@ -16,16 +16,9 @@
     border: none;
     padding: 6px 22px;
 
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: $text-color1;
-
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include text-prop ($text-color1, 500, 16px, 26px);
+    @extend %transition;
     transition-property: background, box-shadow, color;
-    transition-duration: 250ms;
 
 }
 .nav-button:focus, .nav-button:hover{

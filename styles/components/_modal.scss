@@ -49,23 +49,19 @@
     height: 30px;
     border-radius: 100%;
     border: 1px rgba(0, 0, 0, 0.10);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-base;
     align-self: flex-end;
     margin-bottom: 2px;
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transition-property: outline, background;
-    transition-duration: 250ms;
 }
 .modal-close-svg{
     width: 18px;
     height: 18px;
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transition-property: fill;
-    transition-duration: 250ms;
 }
 .modal-close:hover{
     background-color: #FFF;
@@ -104,15 +100,14 @@
 }
 .modal-item input{
     resize: none; 
-     width: 448px;
+    width: 448px;
     height: 40px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.20);
     padding: 12px 16px 12px 35px;
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transition-property: border;
-    transition-duration: 250ms;
 }
 .modal-item input:focus{
     border: 1px solid $main-color;
@@ -139,9 +134,8 @@
     left: 2%;
     fill: #000;
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transition-property: fill;
-    transition-duration: 250ms;
 }
 .modal-box{
     margin-top: 20px;
@@ -164,7 +158,7 @@
 .checkbox-lable{
     color: $text-color2;
     font-family: $Roboto;
-    font-size: 14px;
+    @extend %text-size;
     font-weight: 400;
     line-height: 1.71;
     letter-spacing: 0.42px;
@@ -218,9 +212,8 @@
     margin-left: auto;
     margin-right: auto;
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transition-property: background;
-    transition-duration: 250ms;
 }
 .modal-button:hover, .modal-button:focus{
     background: $button-color;

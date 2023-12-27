@@ -12,9 +12,7 @@
     margin-bottom: 50px;
 }
 .clients-list{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-base;
     gap: 30px;
 }
 .clients-logo{
@@ -22,29 +20,24 @@
     height: 60px;
     fill: #AFB1B8;
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transition-property: fill;
-    transition-duration: 250ms;
 }
 .clients-list-item{
     border-radius: 4px;
     border: 1px solid #AFB1B8;
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transition-property: border;
-    transition-duration: 250ms;
 }
 .clients-link{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-base;
     border-radius: 4px;
     width: 170px;
     height: 92px;
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
     transition-property: border;
-    transition-duration: 250ms;
 }
 .clients-list-item:hover, .clients-link:focus{
     border: 1px solid $main-color;
