@@ -12,8 +12,8 @@ header .container{
 }
 
 .logo{
-    color: #2196F3;
-    font-family: 'Raleway', sans-serif;
+    color: $main-color;
+    font-family: $Raleway, sans-serif;
     font-size: 26px;
     font-weight: 700;
     line-height: 31px;
@@ -30,7 +30,7 @@ header .container{
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.02em;
-    color: #212121;
+    color: $text-color1;
 
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: color;
@@ -44,7 +44,7 @@ header .container{
     display: flex;
 }
 .navigationlink{
-    color: #757575;
+    color: $text-color2;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -56,13 +56,13 @@ header .container{
     gap: 50px;
 }
 .navigationa:hover, .navigationa:focus, .navigationlink:hover, .navigationlink:focus{
-    color: #2196F3;
+    color: $main-color;
     outline: none;
     position: relative;
 }
 .navigationa::after{
     content: '';
-    background-color: #2196F3;
+    background-color: $main-color;
     height: 4px;
     display: block;
     border-radius: 2px;
@@ -84,7 +84,7 @@ header .container{
 .header-icon{
     max-width: 16px;
     height: 12px;
-    fill: #757575;
+    fill: $text-color2;
 
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: fill;
@@ -95,12 +95,12 @@ header .container{
     height: 16px;
 }
 .navigationlink:hover .header-icon, .navigationlink:focus .header-icon{
-    fill: #2196F3;
+    fill: $main-color;
     outline: none;
 }
 
 .active-page{
-    color: #2196F3;
+    color: $main-color;
     position: relative;
 }
 .active-page::after{

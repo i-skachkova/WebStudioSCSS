@@ -72,12 +72,12 @@
     outline: 1px solid rgba(0, 0, 0, 0.10);
 }
 .modal-close:hover .modal-close-svg{
-    fill: #2196F3;
+    fill: $main-color;
 }
 .modal-title{
-    color: #212121;
+    color: $text-color1;
     text-align: center;
-    font-family: 'Roboto';
+    font-family: $Roboto;
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 0.6px;
@@ -96,8 +96,8 @@
     position: relative;
 }
 .modal-subtitle{
-    color: #757575;
-    font-family: 'Roboto';
+    color: $text-color2;
+    font-family: $Roboto;
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 0.12px;
@@ -115,10 +115,10 @@
     transition-duration: 250ms;
 }
 .modal-item input:focus{
-    border: 1px solid #2196F3;
+    border: 1px solid $main-color;
 }
 .modal-item input:focus .modal-svg{
-    fill: #2196F3;
+    fill: $main-color;
 }
 #modal-text{
     margin-top: 4px;
@@ -126,7 +126,7 @@
 }
 #modal-text::placeholder{
     color: rgba(117, 117, 117, 0.50);
-    font-family: 'Roboto';
+    font-family: $Roboto;
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 0.12px;
@@ -155,15 +155,15 @@
 
 }
 .modal-input:hover, .modal-input:focus, .modal-input:active{
-    border-color: #2196F3;
+    border-color: $main-color;
     outline: none;
 }
 .modal-input:hover + .modal-svg, .modal-input:focus + .modal-svg, .modal-input:active + .modal-svg{
-    fill: #2196F3;
+    fill: $main-color;
 }
 .checkbox-lable{
-    color: #757575;
-    font-family: 'Roboto';
+    color: $text-color2;
+    font-family: $Roboto;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.71;
@@ -193,23 +193,23 @@
 }
 #modal-checkbox:checked + .checkbox-custom > .checkbox-svg, #modal-checkbox:checked + .checkbox-custom{
     opacity: 1;
-    background-color: #2196F3;
+    background-color: $main-color;
     border: none;
 
 }
 .modal-link{
-    color: #2196F3;
+    color: $main-color;
     text-decoration-line: underline;
 }
 .modal-button{
     border: none;
     padding: 10px 52px;
     border-radius: 4px;
-    background: #2196F3;
+    background: $main-color;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     color: #FFF;
     text-align: center;
-    font-family: 'Roboto';
+    font-family: $Roboto;
     font-size: 16px;
     font-weight: 700;
     line-height: 1.87;
@@ -223,5 +223,5 @@
     transition-duration: 250ms;
 }
 .modal-button:hover, .modal-button:focus{
-    background: #188CE8;
+    background: $button-color;
 } 
