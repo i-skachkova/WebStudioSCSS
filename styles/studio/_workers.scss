@@ -27,7 +27,7 @@
     line-height: 42px;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: $text-color1;
     margin-bottom: 50px;
 }
 .workers-names{
@@ -36,7 +36,7 @@
     line-height: 19px;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: $text-color1;
 
     margin-top: 30px;
 }
@@ -46,7 +46,7 @@
     line-height: 19px;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: $text-color2;
 
     margin-top: 10px;
 }
@@ -92,6 +92,6 @@
     fill: #FFF;
 }
 .workers-social:hover, .workers-link:focus{
-    background-color: #2196F3;
+    background-color: $main-color;
     outline: none;
 }

@@ -16,7 +16,7 @@
     line-height: 42px;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: $text-color1;
     margin-bottom: 50px;
 }
 .work-img{
@@ -38,7 +38,7 @@
 .work-text{
     color: #FFF;
     text-align: center;
-    font-family: 'Roboto';
+    font-family: $Roboto;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.42px;
