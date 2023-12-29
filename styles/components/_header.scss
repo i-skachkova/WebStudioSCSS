@@ -1,16 +1,82 @@
-header{
+.header{
     height: auto;
     border-bottom: 1px solid #ece;
     padding: 24px 0 25px;
+
+    &__list{
+        display: flex;
+        gap: 50px;
+    }
+    &__page, &__link{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color: $text-color1;
+    
+        @extend %transition;
+        transition-property: color;
+    }
+    
+    &__contacts-list{
+        display: flex;
+        margin-left: auto;
+        gap: 50px;
+    }
+    &__link{
+        color: $text-color2;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__page:hover, &__page:focus, &__link:hover, &__link:focus{
+        color: $main-color;
+        outline: none;
+        position: relative;
+    }
+    &__page::after{
+        content: '';
+        background-color: $main-color;
+        height: 4px;
+        display: block;
+        border-radius: 2px;
+        width: calc(100% + 4px);
+        position: absolute;
+        bottom: -33px;
+        left: -2px;
+        opacity: 0;
+        transform: scaleX(0);
+    
+        transition: transform, opacity;
+        // @extend %transition;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 250ms;
+    }
+    &__page:hover::after, &__page:focus::after{
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    &__icon{
+        max-width: 16px;
+        height: 12px;
+        fill: $text-color2;
+    
+        @extend %transition;
+        transition-property: fill;
+    }
+    .phone-icon{
+        max-width: 10px;
+        height: 16px;
+    }
+    &__link:hover &__icon, &__link:focus &__icon{
+        fill: $main-color;
+        outline: none;
+    }
 }
-header .container{
+.header .container{
     display: flex;
     align-items: center;
 }
-.navigation-list{
-    display: flex;
-}
-
 .logo{
     color: $main-color;
     font-family: $Raleway, sans-serif;
@@ -25,77 +91,6 @@ header .container{
 .studio2{
     color: white;
 }
-.navigationa, .navigationlink{
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    color: $text-color1;
-
-    @extend %transition;
-    transition-property: color;
-}
-.menu-list{
-    display: flex;
-    gap: 51px;
-}
-.contacts-list{
-    display: flex;
-}
-.navigationlink{
-    color: $text-color2;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.contacts-list{
-    margin-left: auto;
-}
-.navigation-list, .contacts-list{
-    gap: 50px;
-}
-.navigationa:hover, .navigationa:focus, .navigationlink:hover, .navigationlink:focus{
-    color: $main-color;
-    outline: none;
-    position: relative;
-}
-.navigationa::after{
-    content: '';
-    background-color: $main-color;
-    height: 4px;
-    display: block;
-    border-radius: 2px;
-    width: calc(100% + 4px);
-    position: absolute;
-    bottom: -33px;
-    left: -2px;
-    opacity: 0;
-    transform: scaleX(0);
-
-    transition: transform, opacity;
-    @extend %transition;
-}
-.navigationa:hover::after, .navigationa:focus::after{
-    opacity: 1;
-    transform: scaleX(1);
-}
-.header-icon{
-    max-width: 16px;
-    height: 12px;
-    fill: $text-color2;
-
-    @extend %transition;
-    transition-property: fill;
-}
-.phone-icon{
-    max-width: 10px;
-    height: 16px;
-}
-.navigationlink:hover .header-icon, .navigationlink:focus .header-icon{
-    fill: $main-color;
-    outline: none;
-}
-
 .active-page{
     color: $main-color;
     position: relative;

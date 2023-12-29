@@ -1,34 +1,34 @@
 /* tech  */
 .tech{
     padding-top: 94px;
-}
-.tech-list{
+    &__list{
     display: flex;
     justify-content: space-between;
     gap: 30px;
-}
-.tech-img-container{
-    border-radius: 4px;
-    background: #F5F4FA;
-    height: 120px;
-    @extend %flex-base;
-    margin-bottom: 30px;
-}
-.tech-img{
-    width: 70px;
-    height: 70px;
-}
-.tech-title{
-    @include text-prop ($text-color1, 700, 14px, 16px);
-    text-transform: uppercase;
-}
-.tech-text{
-    font-weight: 400;
-    @extend %text-size;
-    letter-spacing: 0.03em;
-    color: $text-color2;
-    text-transform: none;
-    width: 270px;
+    }
+    &__img-container{
+        border-radius: 4px;
+        background: #F5F4FA;
+        height: 120px;
+        @extend %flex-base;
+        margin-bottom: 30px;
+    }
+    &__img{
+        width: 70px;
+        height: 70px;
+    }
+    &__title{
+        @include text-prop ($text-color1, 700, 14px, 16px);
+        text-transform: uppercase;
+    }
+    &__text{
+        font-weight: 400;
+        @extend %text-size;
+        letter-spacing: 0.03em;
+        color: $text-color2;
+        text-transform: none;
+        width: 270px;
 
-    margin-top: 10px;
+        margin-top: 10px;
+    }
 }

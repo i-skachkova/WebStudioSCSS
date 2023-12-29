@@ -5,15 +5,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     letter-spacing: 0.06em;
-} 
-.hero .container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 200px 252px;
-}
-.hero-title{
+
+    &__title{
     color: white;
     text-transform: uppercase;
     font-weight: 900;
@@ -23,18 +16,8 @@
 
     animation-name: run-title;
     animation-duration: 3000ms;
-}
-@keyframes run-title{
-    0%{
-        opacity: 0;
-        transform: translateX(-200px);
     }
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-.hero-button{
+    &__button{
     width: 216px;
     height: 50px;
     border-radius: 4px;
@@ -53,12 +36,30 @@
     animation-iteration-count: infinite;
     animation-duration: 5000ms;
     animation-delay: 3000ms;
+    } 
+    &__button:hover, &__button:focus{
+        background-color: $button-color;
+        outline: none;
+    }
 } 
-.hero-button:hover, .hero-button:focus{
-    background-color: $button-color;
-    outline: none;
+.hero .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 200px 252px;
 }
 
+@keyframes run-title{
+    0%{
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 @keyframes button-animation{
     0%{
         transform: scale(1);

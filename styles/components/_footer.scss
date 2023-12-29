@@ -1,9 +1,103 @@
 /*footer */
 
-footer{
+.footer{
     background: #2F303A;
     padding-top: 50px;
     padding-bottom: 60px;
+
+    &__nav-item{
+        margin-top: 9px;
+    }
+    &__link{
+        font-weight: 400;
+        @extend %text-size;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    &__sn-title{
+        color: #FFF;
+        @extend %text-size;
+        font-weight: 700;
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    &__sn-list{
+        @extend %flex-base;
+        gap: 10px;
+    }
+    &__sn-item, &__sn-link:focus{
+        border-radius: 100%;
+        width: 44px;
+        height: 44px;
+        background: rgba(255, 255, 255, 0.10);
+
+        @extend %transition;
+        transition-property: background;
+    }
+    &__sn-link{
+        @extend %flex-base;
+        border-radius: 100%;
+        width: 44px;
+        height: 44px;
+    }
+    &__sn-item:hover, &__sn-link:focus{
+        background: $main-color;
+        outline: none;
+    }
+    &__socials{
+        width: 20px;
+        height: 20px;
+        fill: #FFF;
+    }
+    &__form-title{
+        color: #FFF;
+        font-family: $Roboto;
+        @extend %text-size;
+        font-weight: 700;
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    &__form{
+        display: flex;
+        gap: 12px;
+    }
+    &__email{
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.30);
+        background: rgba(33, 150, 243, 0.00);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        padding: 15px 295px 15px 16px;
+        color: #FFF;
+    }
+    &__form-button{
+        border: none;
+        border-radius: 4px;
+        background: $main-color;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        width: 200px;
+        height: 50px;
+        @extend %flex-base;
+        gap: 10px;
+        color: #FFF;
+        font-family: $Roboto;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.87; 
+        letter-spacing: 0.96px;
+
+        @extend %transition;
+        transition-property: background;
+    }
+    &__form-button:hover{
+        background: $button-color;
+    }
+    &__button-svg{
+        max-width: 24px;
+        max-height: 24px;
+        fill: #FFF;
+    }
 }
 .footer .container{
     display: flex;
@@ -23,98 +117,4 @@ footer address{
     font-weight: 400;
     letter-spacing: 0.42px;
     margin-top: 20px;
-}
-.navigationf{
-    margin-top: 9px;
-}
-.navigationf a{
-    font-weight: 400;
-    @extend %text-size;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-social-networks-title{
-    color: #FFF;
-    @extend %text-size;
-    font-weight: 700;
-    letter-spacing: 0.42px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-.footer-social-networks-list{
-    @extend %flex-base;
-    gap: 10px;
-}
-.footer-social-networks-item, .footer-social-networks-link:focus{
-    border-radius: 100%;
-    width: 44px;
-    height: 44px;
-    background: rgba(255, 255, 255, 0.10);
-
-    @extend %transition;
-    transition-property: background;
-}
-.footer-social-networks-link{
-    @extend %flex-base;
-    border-radius: 100%;
-    width: 44px;
-    height: 44px;
-}
-.footer-social-networks-item:hover, .footer-social-networks-link:focus{
-    background: $main-color;
-    outline: none;
-}
-.footer-socials{
-    width: 20px;
-    height: 20px;
-    fill: #FFF;
-}
-.footer-form-title{
-    color: #FFF;
-    font-family: $Roboto;
-    @extend %text-size;
-    font-weight: 700;
-    letter-spacing: 0.42px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-.footer-form{
-    display: flex;
-    gap: 12px;
-}
-.footer-email{
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.30);
-    background: rgba(33, 150, 243, 0.00);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    padding: 15px 295px 15px 16px;
-    color: #FFF;
-}
-.footer-form-button{
-    border: none;
-    border-radius: 4px;
-    background: $main-color;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    width: 200px;
-    height: 50px;
-    @extend %flex-base;
-    gap: 10px;
-    color: #FFF;
-    font-family: $Roboto;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.87; 
-    letter-spacing: 0.96px;
-
-    @extend %transition;
-    transition-property: background;
-}
-.footer-form-button:hover{
-    background: $button-color;
-}
-.footer-button-svg{
-    max-width: 24px;
-    max-height: 24px;
-    fill: #FFF;
 }
