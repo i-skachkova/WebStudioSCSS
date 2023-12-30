@@ -20,6 +20,7 @@
     &__title{
         @include text-prop ($text-color1, 700, 14px, 16px);
         text-transform: uppercase;
+        text-align: start;
     }
     &__text{
         font-weight: 400;

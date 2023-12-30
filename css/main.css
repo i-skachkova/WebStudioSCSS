@@ -563,6 +563,7 @@ footer address {
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
+  text-align: start;
 }
 .tech__text {
   font-weight: 400;
