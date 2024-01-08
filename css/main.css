@@ -596,6 +596,10 @@ footer address {
   background: #188CE8;
 }
 
+#modal__checkbox {
+  opacity: 1;
+}
+
 /* hero  */
 .hero {
   background-color: rgba(47, 48, 58, 0.4);
