@@ -1,10 +1,39 @@
 /* tech  */
 .tech{
-    padding-top: 94px;
+    padding-top: 60px;
+
+    &__container{
+        display: flex;
+        justify-content: center;
+    }
     &__list{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     gap: 30px;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 738px;
+    }
+    @media screen and (min-width: 1200px) {
+        max-width: 1170px;
+        align-items: baseline;
+    }
+    }
+    &__item{
+        width: 290px;
+
+        @media screen and (min-width: 480px) {
+            width: 450px;
+        }
+        @media screen and (min-width: 768px) {
+            width: 354px;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+        }
     }
     &__img-container{
         border-radius: 4px;
@@ -20,7 +49,10 @@
     &__title{
         @include text-prop ($text-color1, 700, 14px, 16px);
         text-transform: uppercase;
-        text-align: start;
+        text-align: center;
+        @media screen and (min-width: 768px) {
+            text-align: start;
+        }
     }
     &__text{
         font-weight: 400;
@@ -28,7 +60,6 @@
         letter-spacing: 0.03em;
         color: $text-color2;
         text-transform: none;
-        width: 270px;
 
         margin-top: 10px;
     }
