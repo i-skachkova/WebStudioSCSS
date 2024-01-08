@@ -1,27 +1,57 @@
 .header{
     height: auto;
     border-bottom: 1px solid #ece;
-    padding: 24px 0 25px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
 
     &__list{
         display: flex;
         gap: 50px;
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+        }
     }
     &__page, &__link{
         font-weight: 500;
         font-size: 14px;
-        line-height: 16px;
+        line-height: 0.28px;
         letter-spacing: 0.02em;
         color: $text-color1;
     
         @extend %transition;
         transition-property: color;
     }
+    &__link{
+        font-size: 12px;
+        @media screen and (min-width: 1200px) {
+            font-size: 14px;
+        }
+    }
     
     &__contacts-list{
-        display: flex;
         margin-left: auto;
-        gap: 50px;
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        @media screen and (min-width: 1200px) {
+            flex-direction: row;
+            gap: 50px;
+        }
     }
     &__link{
         color: $text-color2;
@@ -72,6 +102,22 @@
         fill: $main-color;
         outline: none;
     }
+
+    &__phone-menu{
+        background-color: transparent;
+        border: none;
+        width: 40px;
+        height: 40px;
+        margin-left: auto;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+    &__menu-svg{
+        width: 40px;
+        height: 40px;
+    }
 }
 .header .container{
     display: flex;
@@ -80,10 +126,15 @@
 .logo{
     color: $main-color;
     font-family: $Raleway, sans-serif;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
-    line-height: 31px;
-    margin-right: 93px;
+    margin-right: 88px;
+
+    @media screen and (min-width: 1200px) {
+        line-height: 31px;
+        font-size: 26px;
+        margin-right: 93px;
+    }    
 }
 .studio{
     color: #000;
