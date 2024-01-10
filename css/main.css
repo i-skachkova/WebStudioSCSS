@@ -709,10 +709,12 @@ footer address {
 /* tech  */
 .tech {
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .tech {
     padding-top: 94px;
+    padding-bottom: 0;
   }
 }
 .tech__container {
