@@ -6,27 +6,67 @@
 
     &__list{
         display: flex;
-        justify-content: space-between;
-    }
-    &__list li{
-        padding-bottom: 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        @media screen and (min-width:768px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 738px;
+        }
+        @media screen and (min-width:1200px) {
+            max-width: 1170px;
+            justify-content: space-between;
+        }
     }
     &__item{
         border-radius: 0px 0px 4px 4px;
         background: #FFF;
         box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-    
+        padding-bottom: 30px;
+        width: 290px;
+
+        @media screen and (min-width:480px) {
+            width: 450px;
+        }
+        @media screen and (min-width:768px) {
+            width: 354px;
+        }
+        @media screen and (min-width:1200px) {
+            width: 270px;
+        }
     }
     &__img{
-        width: 270px;
-        height: 260px;
+        width: 290px;
+        height: 296px;
+
+        @media screen and (min-width:480px) {
+            width: 450px;
+            height: 460px;
+        }
+        @media screen and (min-width:768px) {
+            width: 354px;
+            height: 374px;
+        }
+        @media screen and (min-width:1200px) {
+            width: 270px;
+            height: 260px;
+        }
+
     }
     &__title{
-        @include text-prop ($text-color1, 700, 36px, 42px);
+        @include text-prop ($text-color1, 700, 28px, normal);
         margin-bottom: 50px;
+
+        @media screen and (min-width:1200px) {
+            font-size: 36px;
+        }
     }
     &__names{
-        @include text-prop ($text-color1, 700, 16px, 19px);
+        @include text-prop ($text-color1, 500, 16px, 19px);
         margin-top: 30px;
     }
     &__job{

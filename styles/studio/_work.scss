@@ -2,6 +2,10 @@
 .work{
     padding-top: 118px;
     padding-bottom: 94px;
+    display: none;
+    @media screen and (min-width: 1200px) {
+        display: block;
+    }
     &__list{
     display: flex;
     justify-content: space-between;
@@ -19,6 +23,7 @@
     }
     &__card{
         width: 370px;
+        height: 70px;
         @extend %flex-base;
         background: rgba(47, 48, 58, 0.80);
         padding-top: 27px;
