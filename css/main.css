@@ -280,12 +280,15 @@ button {
   .footer__box {
     width: 768px;
     flex-direction: row;
+    justify-content: center;
+    gap: 165px;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer__box {
     width: auto;
     align-items: center;
+    gap: 0;
   }
 }
 .footer__sn {
@@ -297,7 +300,6 @@ button {
 @media screen and (min-width: 768px) {
   .footer__sn {
     margin-top: 0;
-    margin-left: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -945,9 +947,15 @@ button {
 
 /* workers  */
 .workers {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #F5F4FA;
+}
+@media screen and (min-width: 1200px) {
+  .workers {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .workers__list {
   display: flex;
