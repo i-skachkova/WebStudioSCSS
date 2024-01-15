@@ -15,7 +15,10 @@
     }
     &__title{
         @include text-prop ($text-color1, 700, 36px, 42px);
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 50px;
+        }
     }
     &__img{
         width: 370px;

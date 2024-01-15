@@ -450,7 +450,7 @@ button {
 }
 
 .modal {
-  width: 290px;
+  width: calc(100% - 30px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -464,11 +464,6 @@ button {
   left: 50%;
   transform: translate(-50%, -50%) scale(1) rotate(0deg);
   transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, transform 500ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-}
-@media screen and (min-width: 370px) {
-  .modal {
-    width: 370px;
-  }
 }
 @media screen and (min-width: 480px) {
   .modal {
@@ -519,13 +514,8 @@ button {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  width: 260px;
+  width: calc(100% + 25px);
   position: relative;
-}
-@media screen and (min-width: 370px) {
-  .modal__item {
-    width: 330px;
-  }
 }
 @media screen and (min-width: 480px) {
   .modal__item {
@@ -546,17 +536,12 @@ button {
 }
 .modal__item input {
   resize: none;
-  width: 260px;
+  width: calc(100% - 30px);
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   padding: 12px 16px 12px 35px;
   transition-property: border;
-}
-@media screen and (min-width: 370px) {
-  .modal__item input {
-    width: 330px;
-  }
 }
 @media screen and (min-width: 480px) {
   .modal__item input {
@@ -920,7 +905,12 @@ button {
   color: #212121;
   font-size: 36px;
   line-height: 42px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .work__title {
+    margin-bottom: 50px;
+  }
 }
 .work__img {
   width: 370px;
@@ -1102,11 +1092,12 @@ button {
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 1.08px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 1200px) {
   .clients__title {
     font-size: 36px;
+    margin-bottom: 50px;
   }
 }
 .clients__list {
@@ -1173,13 +1164,35 @@ button {
 
 /* nav  */
 .nav {
-  padding-top: 94px;
-  padding-bottom: 50px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    padding-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav {
+    padding-top: 94px;
+    padding-bottom: 50px;
+  }
 }
 .nav__list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 350px;
+  justify-content: start;
   gap: 8px;
+}
+@media screen and (min-width: 768px) {
+  .nav__list {
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 576px;
+    justify-content: center;
+  }
 }
 .nav__button {
   width: auto;
@@ -1206,23 +1219,74 @@ button {
 
 /* projects  */
 .project {
-  padding-bottom: 94px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .project {
+    padding-bottom: 94px;
+  }
 }
 .project__list {
+  margin-right: auto;
+  margin-left: auto;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px 0;
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .project__list {
+    max-width: 738px;
+    justify-content: start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project__list {
+    max-width: 1170px;
+  }
 }
 .project__card-text {
   padding: 20px 24px;
 }
 .project__item {
   border: 1px solid #EEE;
-  flex-basis: calc((100% - 60px) / 3);
+  width: calc(100% - 30px);
   position: relative;
   overflow: hidden;
   transition-property: box-shadow;
+}
+@media screen and (min-width: 480px) {
+  .project__item {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .project__item {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project__item {
+    width: 370px;
+  }
+}
+.project__img {
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .project__img {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .project__img {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project__img {
+    width: 370px;
+  }
 }
 .project__card {
   position: relative;
@@ -1230,7 +1294,6 @@ button {
 }
 .project__link {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

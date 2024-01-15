@@ -1,12 +1,30 @@
 /* nav  */
 .nav{
-    padding-top: 94px;
-    padding-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+    @media screen and (min-width:768px) {
+        padding-bottom: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 50px;
+    }
 
     &__list{
         display: flex;
-        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 350px;
+        justify-content: start;
         gap: 8px;
+
+        @media screen and (min-width: 768px) {
+            width: auto;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 576px;
+            justify-content: center;
+        }
     }
     &__button{
         width: auto;
