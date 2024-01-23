@@ -688,6 +688,103 @@ button {
   opacity: 0;
 }
 
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #FFF;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  padding: 10px 15px 48px 40px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
+.menu__close {
+  border: none;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+.menu__close:hover .menu__svg, .menu__close:focus .menu__svg {
+  fill: #2196F3;
+}
+.menu__svg {
+  width: 40px;
+  height: 40px;
+}
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.menu__link {
+  color: #212121;
+  font-family: "Roboto";
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+}
+.menu__link:hover, .menu__link:focus {
+  color: #2196F3;
+}
+.menu__contacts {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.menu__phone {
+  color: #2196F3;
+  font-family: "Roboto";
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: 0.68px;
+}
+.menu__mail {
+  color: #757575;
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.48px;
+}
+.menu__sn {
+  margin-top: 64px;
+  display: flex;
+}
+.menu__sn-item {
+  padding: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+.menu__sn-item:last-child {
+  border: none;
+}
+.menu__sn-link {
+  color: #2196F3;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: 0.36px;
+}
+
+.menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.menu.is-hidden {
+  transform: translate(0, 0) scale(0) rotate(90deg);
+}
+
 /* hero  */
 .hero {
   background-color: rgba(47, 48, 58, 0.4);

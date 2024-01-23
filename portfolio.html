@@ -47,7 +47,7 @@
                         </a>
                      </li>
                 </ul>
-                <button class="header__phone-menu">
+                <button class="header__phone-menu" data-menu-open>
                     <svg class="header__menu-svg">
                         <use href="./images/symbol-defs.svg#icon-menu"></use>
                     </svg>
@@ -316,6 +316,47 @@
                 </div>
             </div>
         </footer>
+        <div class="menu is-hidden" data-menu>
+            <button class="menu__close" data-menu-close>
+                <svg class="menu__svg">
+                    <use href="./images/symbol-defs.svg#icon-close"></use>
+                </svg>
+            </button>
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="./index.html" class="menu__link">Студія</a>
+                </li>
+                <li class="menu__item">
+                    <a href="./portfolio.html" class="menu__link">Портфоліо</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Контакти</a>
+                </li>
+            </ul>
+            <ul class="menu__contacts">
+                <li class="menu__contacts-item">
+                    <a href="tel:+380961111111" class="menu__phone">+38 096 111 11 11</a>
+                </li>
+                <li class="menu__contacts-item">
+                    <a href="mailto:info@devstudio.com" class="menu__mail">info@devstudio.com</a>
+                </li>
+            </ul>
+            <ul class="menu__sn">
+                <li class="menu__sn-item">
+                    <a href="" class="menu__sn-link">Instagram</a>
+                </li>
+                <li class="menu__sn-item">
+                    <a href="" class="menu__sn-link">Twitter</a>
+                </li>
+                <li class="menu__sn-item">
+                    <a href="" class="menu__sn-link">Facebook</a>
+                </li>
+                <li class="menu__sn-item">
+                    <a href="" class="menu__sn-link">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
+        <script src="./menu.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
