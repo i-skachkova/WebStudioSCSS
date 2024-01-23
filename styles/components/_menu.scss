@@ -17,6 +17,9 @@
         display: none;
     }
 
+    @extend %transition;
+    transition-property: transform; 
+
     &__close{
         border: none;
         background: transparent;
@@ -106,5 +109,5 @@
     visibility: hidden;
 }
 .menu.is-hidden{
-    transform: translate(0, 0) scale(0) rotate(90deg);
+    transform: translate(0, 0) scale(0);
 }

@@ -3,7 +3,7 @@
   line-height: 24px;
 }
 
-.project__card-owerflow, .project__link, .project__item, .nav__button, .clients__link, .clients__logo, .clients__item, .workers__svg, .workers__link, .workers__social, .hero__button, .modal__button, .modal__svg, .modal__item input, .modal__close-svg, .modal__close, .footer__form-button, .footer__sn-item, .footer__sn-link:focus, .header__icon, .header__page, .header__link {
+.project__card-owerflow, .project__link, .project__item, .nav__button, .clients__link, .clients__logo, .clients__item, .workers__svg, .workers__link, .workers__social, .hero__button, .menu, .modal__button, .modal__svg, .modal__item input, .modal__close-svg, .modal__close, .footer__form-button, .footer__sn-item, .footer__sn-link:focus, .header__icon, .header__page, .header__link {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
@@ -699,6 +699,7 @@ button {
   padding: 10px 15px 48px 20px;
   display: flex;
   flex-direction: column;
+  transition-property: transform;
 }
 @media screen and (min-width: 350px) {
   .menu {
@@ -802,7 +803,7 @@ button {
 }
 
 .menu.is-hidden {
-  transform: translate(0, 0) scale(0) rotate(90deg);
+  transform: translate(0, 0) scale(0);
 }
 
 /* hero  */
